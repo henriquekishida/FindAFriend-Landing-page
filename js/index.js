@@ -16,6 +16,7 @@ document.querySelectorAll(".navLink").forEach(n => n.
 // slider function//
 let count = 1
 document.getElementById("animal1").checked = true
+document.getElementById("team1").checked = true
 
 setInterval(function () {
   nextSlide()
@@ -25,12 +26,16 @@ function nextSlide() {
   count++
   if (count > 3) {
     count = 1
+  } else if (count > 4) {
+    count = 1
+  } {
+    document.getElementById("team" + count).checked = true
   }
   document.getElementById("animal" + count).checked = true
 }
 
 // header scroll function//
-window.addEventListener("scroll", () =>{
+window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 0)
   hamburger.classList.toggle("scrolled", window.scrollY > 0)
   navMenu.classList.toggle("scrolled", window.scrollY > 0)

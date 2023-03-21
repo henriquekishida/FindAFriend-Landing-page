@@ -399,6 +399,137 @@ header {
   }
 }
 
+#about {
+  padding: 0 2rem;
+
+  h3 {
+    font-size: 3rem;
+    color: $blue;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 2rem;
+    color: $blue;
+    font-weight: 400;
+    margin-bottom: 6rem;
+  }
+
+  .teamSlider {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 28rem;
+    height: 28rem;
+    margin: 0 auto;
+  }
+
+  .teamSlides {
+    display: flex;
+    width: 400%;
+    height: 28rem;
+
+    input {
+      display: none;
+    }
+  }
+
+  .team {
+    width: 25%;
+    position: relative;
+    border-radius: 2rem;
+    border: 1px solid rgba(241, 81, 86, 0.3);
+    background: #FDECED;
+    transition: 0.6s ease-in-out;
+
+    p {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    span {
+      display: flex;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: $blue;
+    }
+
+    img {
+      width: 28rem;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 1.8rem;
+    }
+
+  }
+
+  #team1:checked~.fst {
+    margin-left: 0;
+  }
+
+  #team2:checked~.fst {
+    margin-left: -25%;
+  }
+
+  #team3:checked~.fst {
+    margin-left: -50%;
+  }
+
+  #team4:checked~.fst {
+    margin-left: -75%;
+  }
+}
+
+#contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 32rem;
+  height: 30rem;
+  position: relative;
+  overflow: hidden;
+
+  background: $blue;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 9rem 3rem 7rem;
+
+  .container {
+    .dogs {
+      position: absolute;
+      top: -5%;
+      right: -10%;
+    }
+
+    .dogs2 {
+      position: absolute;
+      top: -8rem;
+      left: 1rem;
+    }
+
+    h3 {
+      width: 16rem;
+      font-size: 3rem;
+      color: $white;
+      margin-bottom: 1.8rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: $yellow;
+    }
+
+    .email a {
+      display: flex;
+      gap: 6px;
+      text-decoration: none;
+    }
+  }
+}
+
 footer {
   position: absolute;
   display: flex;
@@ -613,7 +744,7 @@ footer {
   }
 
   #available {
-    margin: 0 auto;
+    margin: 0 auto 10rem;
     display: flex;
     justify-items: center;
     padding: clamp(2rem, 1em + 5vw, 10rem);
@@ -715,6 +846,74 @@ footer {
     }
   }
 
+  #about {
+    display: grid;
+    padding-inline: 10rem;
+    width: clamp(32rem, 89%, 121rem);
+    margin: 0 5.5rem;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-size: clamp(3rem, 1em + 3vw, 4.8rem);
+      }
+
+      p {
+        width: 69rem;
+        font-size: clamp(2rem, 1em, 2rem);
+      }
+    }
+
+    .teamSlider {
+      overflow: visible;
+      margin: 0;
+
+      .teamSlides {
+        width: 121rem;
+        gap: 3.6rem;
+      }
+    }
+  }
+
+  #contact {
+    position: relative;
+    overflow: visible;
+    margin: 14rem auto 17rem;
+    width: clamp(32rem, 2rem + 80vw, 121rem);
+    padding: 7.4rem 10rem;
+    height: 34rem;
+
+    .container .dogs{
+      width: clamp(19rem, 40vw, 72rem);
+      height: 46rem;
+      right: 0;
+      top: -20%;
+    }
+
+    .container .dogs2{
+      width: clamp(19rem, 40vw, 72rem);
+      height: 35rem;
+      top: -61.7%;
+      left: 10%;
+      mask-image: linear-gradient(to bottom, transparent 100%, black 80%, black 80%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 60%, black 0%, black 100%, transparent 100%);
+    }
+
+    .container h3 {
+      position: relative;
+      z-index: 1;
+      width: 37rem;
+      margin-bottom: 3rem;
+      font-size: clamp(3rem, 1em + 3vw, 4.8rem);
+    }
+
+    .container p{
+      font-size: 2rem;
+    }
+  }
+
   footer {
     flex-direction: row;
     justify-content: space-between;
@@ -737,20 +936,42 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    h3{
+    h3 {
       width: 41rem;
     }
 
-    p{
+    p {
       width: 49rem;
     }
 
     .slideContainer {
       width: 59rem;
     }
-  
-    .btn2{
+
+    .btn2 {
       margin: 0;
+    }
+  }
+
+  #about {
+    .text {
+      flex-direction: row;
+    }
+
+    #team1:checked~.fst {
+      margin-left: 0;
+    }
+
+    #team2:checked~.fst {
+      margin-left: 0;
+    }
+
+    #team3:checked~.fst {
+      margin-left: 0;
+    }
+
+    #team4:checked~.fst {
+      margin-left: -75%;
     }
   }
 }
