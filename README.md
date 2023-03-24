@@ -20,6 +20,6 @@ Afterwards, just get in touch with the NGO to schedule a visit and personally me
 
 FindAFriend believes that every pet deserves a comfortable and safe life. Therefore, it creates solutions that help NGOs and protective entities connect adopters to rescued animals. Currently, the company has received a major investment from an animal medicine industry and now needs to evolve its only active product - FindAFriend, to meet the investor's expectations.
 
-<h2 align="center" ><a href="https://henriquekishida-findafriend.netlify.app/" target="_blank">🐱Deploy</a></h2>
+<h2 align="center" ><a href="https://henriquekishida.github.io/FindAFriend-Landing-page/">🐱Deploy</a></h2>
 
 Website currently in Brazilian Portuguese
